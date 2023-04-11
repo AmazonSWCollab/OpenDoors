@@ -3,7 +3,7 @@
 
 OpenDoors is a disabled-led review site for ADA accessibility in local businesses and buildings. Our GitHub repo provides a platform for sharing experiences and knowledge to promote inclusion. Join us in opening doors for everyone.
 
-This is the official GitHub repository for the Open Doors website, which includes the front end & React, and the back end with Express. 
+This is the official GitHub repository for the OpenDoors website, which includes the front end & React, and the back end with Express. 
 
 ## How to run
 
