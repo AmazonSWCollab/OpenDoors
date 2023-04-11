@@ -16,3 +16,5 @@ Next you'll need to start the server by navigating to the base directory for the
 Next, you'll need to get to the base directory for the client folder. and run `npm start`.  The React front end will run at `http://localhost:3000`
 
 For front end dev, go to `client/src/App.js` to start.
+
+If this is your first time developing with these files, be sure to run `npm install` in both client and server folders to get the necessary dependencies.
