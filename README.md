@@ -17,4 +17,4 @@ Next, you'll need to get to the base directory for the client folder. and run `n
 
 For front end dev, go to `client/src/App.js` to start.
 
-If this is your first time developing with these files, be sure to run `npm install` in both client and server folders to get the necessary dependencies.
+If this is your first time developing with these folders, be sure to run `npm install` in both client and server folders to get the necessary dependencies.
