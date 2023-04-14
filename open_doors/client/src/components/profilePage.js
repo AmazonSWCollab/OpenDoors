@@ -16,7 +16,6 @@ export default function Profile() {
             }} />
         </div>
 
-
         <div id="profileBio">
           <h2 style={{ margin: '0'}}>Pancho Rodriguez</h2>
           <h4 style={{ margin: '0'}}>Fullerton, CA</h4>
@@ -63,17 +62,33 @@ export default function Profile() {
           borderRadius: '10px'
         }}></div>
 
-        <div style={{marginLeft:'550px'}}>
-
-          <div id="profileBioSquare" style={{
+        
+        <div id="profileBioSquare" 
+          style={{
+            borderRadius: '100px',
+            left: '550px',
+            top: '280px',
             width: '10px',
             height: '10px',
-            top: '280px',
-            borderRadius: '50px',
-            }}>  
-          </div>
-
+            display: 'flex',
+            justifyContent: 'center',
+            flexDirection: 'column',
+            }}>
+          <img href="" alt="" src={userHead}
+            style={{
+              width: '50px',
+              height: '50px',
+              marginLeft: '-20px'
+            }} />
         </div>
+
+        <div id="profileBio" style={{
+          top: '50%',
+          right:'50%'
+        }}>
+          <h2 style={{ margin: '0'}}>Pancho Rodriguez</h2>
+          <h4 style={{ margin: '0'}}>Fullerton, CA</h4>
+          </div>
 
       </div> {/*End of Recent Activity Section*/}
 
@@ -109,25 +124,23 @@ export default function Profile() {
           Favorite Things
         </h3>
 
-        <li>
-          <ul style={{
-          position: 'absolute',
-          width: '230px',
-          height: '86px',
-          left: '1110px',
-          top: '500px',
-          fontFamily: 'Quicksand',
-          fontStyle: 'normal',
-          fontWeight: '500',
-          fontSize: '24px',
-          lineHeight: '30px',
-          color: '#000000'
-          }}>
-            <li>Dogs</li>
-            <li>Animals</li>
-            <li>Discovery Channel</li>
-          </ul>
-        </li>
+        <ul style={{
+        position: 'absolute',
+        width: '230px',
+        height: '86px',
+        left: '1110px',
+        top: '500px',
+        fontFamily: 'Quicksand',
+        fontStyle: 'normal',
+        fontWeight: '500',
+        fontSize: '24px',
+        lineHeight: '30px',
+        color: '#000000'
+        }}>
+          <li>Dogs</li>
+          <li>Animals</li>
+          <li>Discovery Channel</li>
+        </ul>
 
         <h3 style={{
           position: 'absolute',
