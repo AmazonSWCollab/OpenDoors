@@ -1,12 +1,18 @@
+/* images */
 import stars from '../assets/symbols/stars.png';
 import userHead from '../assets/symbols/userHead.png';
+
+/* buttons */
+import MoreButton from './profilePageButtons';
 
 export default function Profile() {
   return (
     <div>
 
+      {/*Placeholder for a banner photo that a user can upload*/}
       <div id="bannerPhoto"></div>
 
+      {/*green square that holds the bigger default user icon*/}
       <div style={{marginLeft:'200px'}}>
         <div id="profileBioSquare">
           <img href="" alt="" src={userHead}
@@ -15,7 +21,8 @@ export default function Profile() {
               height: '75px',
             }} />
         </div>
-
+        
+        {/*user bio info: name, city, state, default stars icon*/}
         <div id="profileBio">
           <h2 style={{ margin: '0'}}>Pancho Rodriguez</h2>
           <h4 style={{ margin: '0'}}>Fullerton, CA</h4>
@@ -31,6 +38,7 @@ export default function Profile() {
           </div> {/* end of profileBio */}
       </div>
 
+      {/* --------- Recent Activity Section -----------*/}
       <div>
         <h2 style={{
           position: 'absolute',
@@ -49,8 +57,7 @@ export default function Profile() {
           Recent Activity</h2>
       </div>
 
-        {/*Start of the Recent Activity Section*/}
-      <div id="Recent-Activity-Section">
+      <div>
         <div style={{
           position: 'absolute',
           width: '440px',
@@ -60,9 +67,10 @@ export default function Profile() {
           background: '#317B22',
           boxShadow: '5px 5px 6px rgba(0, 0, 0, 0.25)',
           borderRadius: '10px'
-        }}></div>
+        }}>
+        </div>
 
-        
+        {/* circle that holds the default user's icon in Review Activity section */}
         <div id="profileBioSquare" 
           style={{
             borderRadius: '100px',
@@ -81,18 +89,59 @@ export default function Profile() {
               marginLeft: '-20px'
             }} />
         </div>
-
+        
+        {/* profile bio next to green circle that holds user icon */}
         <div id="profileBio" style={{
-          top: '50%',
-          right:'50%'
+          top: '38%',
+          right:'43.5%'
         }}>
           <h2 style={{ margin: '0'}}>Pancho Rodriguez</h2>
           <h4 style={{ margin: '0'}}>Fullerton, CA</h4>
-          </div>
+        </div>
+
+        {/* More Button*/}
+        <div>
+          <MoreButton text="More" />
+        </div>
+
+        {/* Text box of Recent Activity*/}
+        <div style={{
+          position: 'absolute',
+          width: '400px',
+          height: '150px',
+          left: '559px',
+          top: '615px',
+          background: '#F6F6F6',
+          borderRadius: '10px',
+          zIndex: '2'
+        }}>
+          <p style={{padding:'15px'}}>
+            I loved that they let me have my service animal in this place. I love this place.
+          </p>
+        </div>
+
+        {/* time of last post */}
+        <div style={{
+          position: 'absolute',
+          width: '112px',
+          height: '24px',
+          left: '565px',
+          top: '763px',
+          fontFamily: 'Quicksand',
+          fontStyle: 'normal',
+          fontWeight: '500',
+          fontSize: '16px',
+          lineHeight: '20px',
+          color: '#FFFFFF',
+          zIndex: '2'
+        }}>
+          <p>2 months ago</p>
+        </div>
 
       </div> {/*End of Recent Activity Section*/}
 
-      <div id="About-Me-Section">
+      {/* ----------Start of the About me Section---------*/}
+      <div>
         <h2 style={{
           position: 'absolute',
           width: '184px',
@@ -106,7 +155,8 @@ export default function Profile() {
           lineHeight: '50px',
           color: '#317B22'
       }}>
-        About Me</h2>
+        About Me
+        </h2>
 
         <h3 style={{
           position: 'absolute',

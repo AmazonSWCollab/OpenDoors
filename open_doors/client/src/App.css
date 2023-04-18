@@ -31,3 +31,15 @@
   /* So I can push the db code down out of view for now*/
   height:850px;
 }
+
+#more-button{
+  position: absolute;
+  width: 90px;
+  height: 47px;
+  left: 875px;
+  top: 525Px;
+  z-index: 3;
+  background-color: #87CB9E;
+  color: #FFFFFF;
+  border-radius: 15px;
+}
