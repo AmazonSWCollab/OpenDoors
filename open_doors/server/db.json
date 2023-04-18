@@ -1,0 +1,28 @@
+{
+  "businesses": [
+    { 
+        "id": 1,
+        "name": "Carl's Jr.",
+        "address": "123 Flower St.",
+        "zipcode": "12345",
+        "city": "Fullerton",
+        "state:": "CA"
+    },
+    {
+        "id": 2,
+        "name": "7Leaves",
+        "address": "456 Issa Ln",
+        "zipcode": "21212",
+        "city": "Orange",
+        "state": "CA"
+    },
+    {
+        "id": 3,
+        "name": "24 Hour Fitness",
+        "address": "789 Drone Ave",
+        "zipcode": "98765",
+        "city": "Huntington Beach",
+        "state": "CA"
+    }
+  ]
+}
