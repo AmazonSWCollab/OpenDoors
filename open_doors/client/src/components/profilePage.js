@@ -3,7 +3,7 @@ import stars from '../assets/symbols/stars.png';
 import userHead from '../assets/symbols/userHead.png';
 
 /* buttons */
-import MoreButton from './profilePageButtons';
+import { MoreButton, PhotoViewerButton } from './profilePageButtons';
 
 export default function Profile() {
   return (
@@ -91,17 +91,22 @@ export default function Profile() {
         </div>
         
         {/* profile bio next to green circle that holds user icon */}
-        <div id="profileBio" style={{
-          top: '38%',
-          right:'43.5%'
+        <div style={{
+          position: 'absolute',
+          top: '520px',
+          left:'650px',
+          zIndex: '4'
         }}>
           <h2 style={{ margin: '0'}}>Pancho Rodriguez</h2>
           <h4 style={{ margin: '0'}}>Fullerton, CA</h4>
         </div>
 
-        {/* More Button*/}
+        {/* Buttons */}
         <div>
           <MoreButton text="More" />
+        </div>
+        <div>
+          <PhotoViewerButton text="2 Photos" />
         </div>
 
         {/* Text box of Recent Activity*/}
