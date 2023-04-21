@@ -1,6 +1,8 @@
 /* images */
 import stars from '../assets/symbols/stars.png';
 import userHead from '../assets/symbols/userHead.png';
+// import dogHeart from '../assets/symbols/dog-heart.png';
+// import galleryIcon from '../assets/symbols/photo-gallery.png';
 
 /* buttons */
 import { MoreButton, PhotoViewerButton } from './profilePageButtons';
