@@ -6,7 +6,7 @@
         "address": "123 Flower St.",
         "zipcode": "12345",
         "city": "Fullerton",
-        "state:": "CA"
+        "state": "CA"
     },
     {
         "id": 2,

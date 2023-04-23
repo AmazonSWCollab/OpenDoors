@@ -6,18 +6,11 @@ const PORT = 5000
 
 
 
-app.get("/api", (req, res) => {
+app.get("/api", (req, res) => 
     axios
       .get("http://localhost:3001/businesses")
-      .then(response => {
-        res.json(response.data)
-      })
-    // fetch("http://localhost:3001/businesses")
-    //   .then(res => {
-    //       console.log(res)
-    //       // res.json()
-    //   })
-})
+      .then(response => res.json(response.data))
+)
 
 app.get("/admin", (req, res) => {
   
