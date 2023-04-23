@@ -15,6 +15,8 @@ Next you'll need to start the server by navigating to the base directory for the
 
 Next, you'll need to get to the base directory for the client folder. and run `npm start`.  The React front end will run at `http://localhost:3000`
 
+Finally, run `npx json-server --port 3001 --watch db.json` in the `/server` folder to start the JSON server
+
 For front end dev, go to `/client/src/App.js` to get started.
 
 If this is your first time developing with these folders, be sure to run `npm install` in both client and server folders to get the necessary dependencies.
