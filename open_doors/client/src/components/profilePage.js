@@ -1,8 +1,7 @@
 /* images */
 import stars from '../assets/symbols/stars.png';
 import userHead from '../assets/symbols/userHead.png';
-// import dogHeart from '../assets/symbols/dog-heart.png';
-// import galleryIcon from '../assets/symbols/photo-gallery.png';
+import dogHeart from '../assets/symbols/dog-heart.png';
 
 /* buttons */
 import { MoreButton, PhotoViewerButton } from './profilePageButtons';
@@ -38,6 +37,25 @@ export default function Profile() {
             2 Reviews
           </h4>
           </div> {/* end of profileBio */}
+      </div>
+
+      {/* ---- Badges section ----*/}
+      <div>
+      <h3 style={{
+          position: 'absolute',
+          width: '220px',
+          height: '50px',
+          left: '130px',
+          top: '450px',
+          fontFamily: 'Quicksand',
+          fontStyle: 'normal',
+          fontWeight: '700',
+          fontSize: '40px',
+          lineHeight: '50px',
+          color: '#317B22'
+      }}>
+        My Badges
+        </h3>
       </div>
 
       {/* --------- Recent Activity Section -----------*/}
@@ -108,7 +126,7 @@ export default function Profile() {
           <MoreButton text="More" />
         </div>
         <div>
-          <PhotoViewerButton text="2 Photos" />
+          <PhotoViewerButton text="2 Photos"/>
         </div>
 
         {/* Text box of Recent Activity*/}
@@ -127,6 +145,19 @@ export default function Profile() {
           </p>
         </div>
 
+        {/* symbols of inclusivity box*/}
+        <div>
+          <img href="" alt="" src={dogHeart}
+              style={{
+                position: 'absolute',
+                width: '35px',
+                height: '35px',
+                left: '775px',
+                top: '775px',
+                zIndex: '3'
+              }} />
+        </div>
+
         {/* time of last post */}
         <div style={{
           position: 'absolute',
@@ -137,7 +168,7 @@ export default function Profile() {
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '500',
-          fontSize: '16px',
+          fontSize: '20px',
           lineHeight: '20px',
           color: '#FFFFFF',
           zIndex: '2'
