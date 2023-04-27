@@ -3,6 +3,8 @@ import './App.css';
 // to help link the profile page for users
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Profile from './components/profilePage'
+import SignUp from './components/signUpPage'
+import LogIn from './components/logInPage'
 
 import React, { useEffect, useState } from 'react'
 
@@ -37,6 +39,12 @@ let App = () => {
         <nav>
           <ul>
             <li>
+              <Link to="signUpPage" >Sign Up</Link>
+            </li>
+            <li>
+              <Link to="logInPage" >Log In</Link>
+            </li>
+            <li>
               <Link to="profilePage" >Profile Page</Link>
             </li>
           </ul>
@@ -44,6 +52,8 @@ let App = () => {
 
         <Routes>
           <Route path="profilePage" element={<Profile />} />
+          <Route path="signUpPage" element={<SignUp />} />
+          <Route path="logInPage" element={<LogIn />} />
         </Routes>
 
       </BrowserRouter>    
