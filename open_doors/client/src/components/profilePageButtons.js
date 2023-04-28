@@ -1,4 +1,3 @@
-import React from 'react';
 import galleryIcon from '../assets/symbols/photo-gallery.png';
 
 export function MoreButton(props) {
