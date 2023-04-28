@@ -170,3 +170,39 @@ nav ul li a:hover {
   left: 250px;
   top: 2px;
 }
+
+#OD-title{
+  position: absolute;
+  width: 720px;
+  height: 130px;
+  left: 148px;
+  top: 185px;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 160px;
+  color: #507A22;
+}
+
+#OD-phrase{
+  position: absolute;
+  width: 659px;
+  height: 45px;
+  left: 152px;
+  top: 329px;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 45px;
+  color: #507A22;
+}
+
+#OD-Home-photo{
+  position: absolute;
+  width: 657px;
+  height: 450px;
+  left: 780px;
+  top: 136px;
+}

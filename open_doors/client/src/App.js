@@ -5,6 +5,9 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Profile from './components/profilePage'
 import SignUp from './components/signUpPage'
 import LogIn from './components/logInPage'
+import Home from './components/homePage'
+
+// images
 import OpenDoorsLogo from './assets/symbols/Logo.png';
 
 import React, { useEffect, useState } from 'react'
@@ -34,11 +37,14 @@ let App = () => {
     <div>
 
       <h1 id="OpenDoorsLogo">OpenDoors</h1>
-      <img src={OpenDoorsLogo} id="OD-Logo"></img>
+      <img src={OpenDoorsLogo} id="OD-Logo" alt=""></img>
 
       <BrowserRouter>
         <nav>
           <ul>
+            <li>
+              <Link to="/" >Home</Link>
+            </li>
             <li>
               <Link to="signUpPage" >Sign Up</Link>
             </li>
@@ -55,6 +61,7 @@ let App = () => {
           <Route path="profilePage" element={<Profile />} />
           <Route path="signUpPage" element={<SignUp />} />
           <Route path="logInPage" element={<LogIn />} />
+          <Route path="/" element={<Home />} />
         </Routes>
 
       </BrowserRouter>
