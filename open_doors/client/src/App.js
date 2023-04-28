@@ -43,7 +43,7 @@ let App = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/" >Home</Link>
+              <Link to="OpenDoors/" >Home</Link>
             </li>
             <li>
               <Link to="signUpPage" >Sign Up</Link>
@@ -61,7 +61,7 @@ let App = () => {
           <Route path="profilePage" element={<Profile />} />
           <Route path="signUpPage" element={<SignUp />} />
           <Route path="logInPage" element={<LogIn />} />
-          <Route path="/" element={<Home />} />
+          <Route path="OpenDoors/" element={<Home />} />
         </Routes>
 
       </BrowserRouter>
