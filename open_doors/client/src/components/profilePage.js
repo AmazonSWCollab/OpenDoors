@@ -22,7 +22,7 @@ export default function Profile() {
               height: '75px',
             }} />
         </div>
-        
+
         {/*user bio info: name, city, state, default stars icon*/}
         <div id="profileBio">
           <h2 style={{ margin: '0'}}>Pancho Rodriguez</h2>
@@ -46,13 +46,13 @@ export default function Profile() {
           width: '220px',
           height: '50px',
           left: '130px',
-          top: '450px',
+          top: '275px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '700',
           fontSize: '40px',
           lineHeight: '50px',
-          color: '#317B22'
+          color: '#507A22'
       }}>
         My Badges
         </h3>
@@ -65,13 +65,13 @@ export default function Profile() {
           width: '291px',
           height: '50px',
           left: '630px',
-          top: '400px',
+          top: '285px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '700',
           fontSize: '40px',
           lineHeight: '50px',
-          color: '#317B22',
+          color: '#507A22',
           zIndex: '3'
         }}>
           Recent Activity</h2>
@@ -83,24 +83,25 @@ export default function Profile() {
           width: '440px',
           height: '320px',
           left: '540px',
-          top: '500px',
-          background: '#317B22',
+          top: '370px',
+          background: '#507A22',
           boxShadow: '5px 5px 6px rgba(0, 0, 0, 0.25)',
           borderRadius: '10px'
         }}>
         </div>
 
         {/* circle that holds the default user's icon in Review Activity section */}
-        <div id="profileBioSquare" 
+        <div id="profileBioSquare"
           style={{
             borderRadius: '100px',
             left: '550px',
-            top: '280px',
+            top: '330px',
             width: '10px',
             height: '10px',
             display: 'flex',
             justifyContent: 'center',
             flexDirection: 'column',
+            background: '#DD9500'
             }}>
           <img href="" alt="" src={userHead}
             style={{
@@ -109,13 +110,14 @@ export default function Profile() {
               marginLeft: '-20px'
             }} />
         </div>
-        
+
         {/* profile bio next to green circle that holds user icon */}
         <div style={{
           position: 'absolute',
-          top: '520px',
+          top: '380px',
           left:'650px',
-          zIndex: '4'
+          zIndex: '4',
+          color: 'white'
         }}>
           <h2 style={{ margin: '0'}}>Pancho Rodriguez</h2>
           <h4 style={{ margin: '0'}}>Fullerton, CA</h4>
@@ -135,8 +137,8 @@ export default function Profile() {
           width: '400px',
           height: '150px',
           left: '559px',
-          top: '615px',
-          background: '#F6F6F6',
+          top: '485px',
+          background: '#D5CFE1',
           borderRadius: '10px',
           zIndex: '2'
         }}>
@@ -153,7 +155,7 @@ export default function Profile() {
                 width: '35px',
                 height: '35px',
                 left: '775px',
-                top: '775px',
+                top: '646px',
                 zIndex: '3'
               }} />
         </div>
@@ -164,7 +166,7 @@ export default function Profile() {
           width: '112px',
           height: '24px',
           left: '565px',
-          top: '763px',
+          top: '630px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '500',
@@ -185,13 +187,13 @@ export default function Profile() {
           width: '184px',
           height: '50px',
           left: '1100px',
-          top: '400px',
+          top: '285px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '700',
           fontSize: '40px',
           lineHeight: '50px',
-          color: '#317B22'
+          color: '#507A22'
       }}>
         About Me
         </h2>
@@ -201,13 +203,13 @@ export default function Profile() {
           width: '240px',
           height: '37px',
           left: '1130px',
-          top: '455px',
+          top: '335px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '600',
           fontSize: '32px',
           lineHeight: '40px',
-          color: '#317B22'
+          color: '#507A22'
           }}>
           Favorite Things
         </h3>
@@ -216,8 +218,8 @@ export default function Profile() {
         position: 'absolute',
         width: '230px',
         height: '86px',
-        left: '1110px',
-        top: '500px',
+        left: '1120px',
+        top: '380px',
         fontFamily: 'Quicksand',
         fontStyle: 'normal',
         fontWeight: '500',
@@ -234,14 +236,14 @@ export default function Profile() {
           position: 'absolute',
           width: '290px',
           height: '37px',
-          left: '1130px',
-          top: '585px',
+          left: '1125px',
+          top: '470px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '600',
           fontSize: '32px',
           lineHeight: '40px',
-          color: '#317B22'
+          color: '#507A22'
           }}>
           OpenDoors Member
         </h3>
@@ -249,8 +251,8 @@ export default function Profile() {
           position: 'absolute',
           width: '230px',
           height: '86px',
-          left: '1150px',
-          top: '640px',
+          left: '1160px',
+          top: '520px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '500',

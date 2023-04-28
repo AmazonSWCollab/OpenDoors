@@ -1,14 +1,16 @@
+import '../App.css';
+
 import { useState } from 'react';
 
 export default function LogIn() {
 
     const [email, enterEmail] = useState('');
     const [password, enterPassword] = useState('');
-    
+
     const handleEmailInput = (event) => {
         enterEmail(event.target.value);
       };
-    
+
     const handlePasswordInput = (event) => {
         enterPassword(event.target.value);
       };
@@ -21,14 +23,14 @@ export default function LogIn() {
     return (
         <div style={{
                 position: 'relative',
-                color: '#317B22',
+                color: '#507A22',
                 fontFamily: 'Quicksand',
                 fontSize: '24px',
                 fontWeight: '700',
                 textAlign: 'center'
         }}>
             <h1>Log Into OpenDoors</h1>
-            <form onSubmit={handleSubmit} 
+            <form onSubmit={handleSubmit}
                 style={{
                     display: 'flex',
                     flexDirection: 'column'
@@ -46,7 +48,7 @@ export default function LogIn() {
                 </label>
             </form>
 
-          <button type="submit">Submit</button>
+          <button type="submit" id="submit-btn">Log In</button>
 
         </div>
     )

@@ -1,4 +1,7 @@
+import '../App.css';
+
 import { useState } from 'react';
+
 
 export default function SignUp() {
   // code for displaying/vanishing buttons
@@ -78,28 +81,26 @@ export default function SignUp() {
   };
 
   return (
-    <div>
-      <h1 style={{
-        position: 'relative',
-        color: '#317B22',
-        fontFamily: 'Quicksand',
-        fontSize: '36px',
-        fontWeight: '700',
-        textAlign: 'center'
-      }}>Create an Account</h1>
+    <div style={{
+      position: 'relative',
+      color: '#507A22',
+      fontFamily: 'Quicksand',
+      fontSize: '24px',
+      fontWeight: '700',
+      textAlign: 'center'
+    }}>
+      <h1>Sign Up For Open Doors</h1>
 
       {showButton && (
         <div style={{
             display: 'flex',
             justifyContent: 'center',
         }}>
-          <button onClick={createUserAccount} style={{
-            marginRight: '20px'
-          }}>
+          <button onClick={createUserAccount} id="create-user-acc-btn">
             Create a User Account
           </button>
 
-          <button onClick={createBusinessAcc}>
+          <button onClick={createBusinessAcc} id="create-busi-acc-btn">
             Register a Business
           </button>
         </div>
@@ -110,7 +111,7 @@ export default function SignUp() {
       {accountType === 'user' && (
         <div style={{
             position: 'relative',
-            color: '#317B22',
+            color: '#507A22',
             fontFamily: 'Quicksand',
             fontSize: '24px',
             fontWeight: '700',
@@ -119,39 +120,39 @@ export default function SignUp() {
             <h3>Free User Account</h3>
 
         <div>
-          <form onSubmit={handleSubmit} 
+          <form onSubmit={handleSubmit}
             style={{
                 display: 'flex',
                 flexDirection: 'column'
             }}>
 
             <label style={{ marginBottom: '12px' }}>
-              First Name
-              <input type="text" value={firstName} onChange={handleFirstNameChange} 
+              First Name:
+              <input type="text" value={firstName} onChange={handleFirstNameChange}
                 style={{ marginLeft: '12px' }}/>
             </label>
 
             <label style={{ marginBottom: '12px' }}>
-              Last Name
+              Last Name:
               <input type="text" value={lastName} onChange={handleLastNameChange}
                 style={{ marginLeft: '15px' }} />
             </label>
 
             <label style={{ marginBottom: '12px' }}>
-              Email
-              <input type="email" value={email} onChange={handleEmailChange} 
+              Email:
+              <input type="email" value={email} onChange={handleEmailChange}
                 style={{ marginLeft: '65px' }}/>
             </label>
 
             <label style={{ marginBottom: '12px' }}>
-              Zipcode
-              <input type="text" value={zipcode} onChange={handleZipcodeChange} 
+              Zipcode:
+              <input type="text" value={zipcode} onChange={handleZipcodeChange}
               style={{ marginLeft: '43px' }}/>
             </label>
 
             <label style={{ marginBottom: '12px' }}>
-              Password
-              <input type="password" value={password} onChange={handlePasswordChange} 
+              Password:
+              <input type="password" value={password} onChange={handlePasswordChange}
               style={{ marginLeft: '28px' }}/>
             </label>
 
@@ -167,7 +168,7 @@ export default function SignUp() {
             </div>
           )}
 
-          <button type="submit">Submit</button>
+          <button type="submit" id="submit-btn">Submit</button>
 
       </div>  {/* end of User Input Form */}
 
@@ -179,7 +180,7 @@ export default function SignUp() {
       {accountType === 'business' && (
         <div style={{
             position: 'relative',
-            color: '#317B22',
+            color: '#507A22',
             fontFamily: 'Quicksand',
             fontSize: '24px',
             fontWeight: '700',
@@ -188,57 +189,57 @@ export default function SignUp() {
           <h3>Paid Business Account</h3>
 
           <div>
-          <form onSubmit={handleSubmit} 
+          <form onSubmit={handleSubmit}
               style={{
                 display: 'flex',
                 flexDirection: 'column'
               }}>
 
             <label style={{ marginBottom: '12px' }}>
-              Business Name
-              <input type="text" value={businessName} onChange={handleBusinessNameChange} 
+              Business Name:
+              <input type="text" value={businessName} onChange={handleBusinessNameChange}
                 style={{ marginLeft: '12px' }}/>
             </label>
 
             <label style={{ marginBottom: '12px' }}>
-              Address
+              Address:
               <input type="text" value={address} onChange={handleAddressChange}
                 style={{ marginLeft: '82px' }} />
             </label>
 
             <label style={{ marginBottom: '12px' }}>
-              Zipcode
-              <input type="text" value={zipcode} onChange={handleZipcodeChange} 
+              Zipcode:
+              <input type="text" value={zipcode} onChange={handleZipcodeChange}
               style={{ marginLeft: '83px' }}/>
             </label>
 
             <label style={{ marginBottom: '12px' }}>
-              State
-              <input type="text" value={state} onChange={handleStateChange} 
+              State:
+              <input type="text" value={state} onChange={handleStateChange}
               style={{ marginLeft: '113px' }}/>
             </label>
 
             <label style={{ marginBottom: '12px' }}>
-              Email
-              <input type="email" value={email} onChange={handleEmailChange} 
+              Email:
+              <input type="email" value={email} onChange={handleEmailChange}
                 style={{ marginLeft: '107px' }}/>
             </label>
 
             <label style={{ marginBottom: '12px' }}>
-              Password
-              <input type="password" value={password} onChange={handlePasswordChange} 
+              Password:
+              <input type="password" value={password} onChange={handlePasswordChange}
               style={{ marginLeft: '70px' }}/>
             </label>
 
             <label style={{ marginBottom: '12px' }}>
               Category:
-              <input type="text" value={category} onChange={handleCategoryChange} 
+              <input type="text" value={category} onChange={handleCategoryChange}
                 style={{ marginLeft: '65px' }}/>
             </label>
 
             <label style={{ marginBottom: '12px' }}>
               Credit Card:
-              <input type="text" value={creditCardNum} onChange={handlePaymentChange} 
+              <input type="text" value={creditCardNum} onChange={handlePaymentChange}
                 style={{ marginLeft: '33px' }}/>
             </label>
 
@@ -254,7 +255,7 @@ export default function SignUp() {
             </div>
           )}
 
-          <button type="submit">Submit</button>
+          <button type="submit" id="submit-btn">Submit</button>
 
       </div>  {/* end of Businesss Input Form */}
 

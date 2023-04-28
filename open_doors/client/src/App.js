@@ -5,13 +5,14 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Profile from './components/profilePage'
 import SignUp from './components/signUpPage'
 import LogIn from './components/logInPage'
+import OpenDoorsLogo from './assets/symbols/Logo.png';
 
 import React, { useEffect, useState } from 'react'
 
 
 let getData = () => {
   // TODO: Add useState and useEffect blocks to this body
-  
+
 }
 
 let App = () => {
@@ -32,9 +33,9 @@ let App = () => {
   return (
     <div>
 
-      {/* THIS ENTIRE <div> BLOCK IS A TEST BLOCK. RUN ONCE AND IF EVERYTHING
-          RUNS FINE, THEN YOU CAN DELETE IT AND START CREATING THE PAGE   */}
-      
+      <h1 id="OpenDoorsLogo">OpenDoors</h1>
+      <img src={OpenDoorsLogo} id="OD-Logo"></img>
+
       <BrowserRouter>
         <nav>
           <ul>
@@ -56,13 +57,13 @@ let App = () => {
           <Route path="logInPage" element={<LogIn />} />
         </Routes>
 
-      </BrowserRouter>    
-          
+      </BrowserRouter>
+
       {console.log(typeof backendData)}
       {
-        (typeof backendData == "undefined") ? ( 
-        <p>Loading...</p> 
-      ) : ( 
+        (typeof backendData == "undefined") ? (
+        <p>Loading...</p>
+      ) : (
         backendData.map((business, i) => (
           <>
             <h1 key={i}>{business.name}</h1>
