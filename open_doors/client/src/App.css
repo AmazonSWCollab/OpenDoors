@@ -206,3 +206,16 @@ nav ul li a:hover {
   left: 780px;
   top: 136px;
 }
+
+.OD-footer{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  padding: 0px;
+  background-color: #507A22;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+}
