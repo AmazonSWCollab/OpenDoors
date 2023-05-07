@@ -1,12 +1,12 @@
 import './App.css';
+import Header from './components/Header';
 
 // to help link the profile page for users
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+// import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Profile from './components/profilePage'
 import SignUp from './components/signUpPage'
 import LogIn from './components/logInPage'
 import Home from './components/homePage'
-import DropDownMenu from './components/dropDownMenu'
 
 // images
 import OpenDoorsLogo from './assets/symbols/Logo.png';
@@ -37,12 +37,15 @@ let App = () => {
   return (
     <div>
 
-      {/* Header section */}
+      {/* Header section
       <h1 id="OpenDoorsLogo">OpenDoors</h1>
       <img src={OpenDoorsLogo} id="OD-Logo" alt=""></img>
+      */}
 
-      <DropDownMenu></DropDownMenu>
-
+      <div>
+        <Header />
+      </div>
+{/*
       <BrowserRouter>
         <nav>
           <ul>
@@ -69,7 +72,7 @@ let App = () => {
         </Routes>
 
       </BrowserRouter>
-
+*/}
       {/* end of Header section */}
 
       {console.log(typeof backendData)}
