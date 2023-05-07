@@ -6,6 +6,7 @@ import Profile from './components/profilePage'
 import SignUp from './components/signUpPage'
 import LogIn from './components/logInPage'
 import Home from './components/homePage'
+import DropDownMenu from './components/dropDownMenu'
 
 // images
 import OpenDoorsLogo from './assets/symbols/Logo.png';
@@ -40,6 +41,8 @@ let App = () => {
       <h1 id="OpenDoorsLogo">OpenDoors</h1>
       <img src={OpenDoorsLogo} id="OD-Logo" alt=""></img>
 
+      <DropDownMenu></DropDownMenu>
+
       <BrowserRouter>
         <nav>
           <ul>
@@ -53,7 +56,7 @@ let App = () => {
               <Link to="logInPage" >Log In</Link>
             </li>
             <li>
-              <Link to="profilePage" >Profile Page</Link>
+              <Link to="profilePage" >Profile</Link>
             </li>
           </ul>
         </nav>
