@@ -8,7 +8,7 @@ export const menuItems = [
     url: '/logInPage',
   },
   {
-    title: 'Home',
+    title: 'User',
     url: '/OpenDoors/',
     submenu: [
       {

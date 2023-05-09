@@ -4,7 +4,7 @@ import userHead from '../assets/symbols/userHead.png';
 import dogHeart from '../assets/symbols/dog-heart.png';
 
 /* buttons */
-import { MoreButton, PhotoViewerButton } from './profilePageButtons';
+import { MoreButton, PhotoViewerButton } from '../components/profilePageButtons';
 
 export default function Profile() {
   return (

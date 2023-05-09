@@ -1,17 +1,16 @@
 import './App.css';
-import Header from './components/Header';
-
-// to help link the profile page for users
-// import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import Profile from './components/profilePage'
-import SignUp from './components/signUpPage'
-import LogIn from './components/logInPage'
-import Home from './components/homePage'
-
-// images
-import OpenDoorsLogo from './assets/symbols/Logo.png';
 
 import React, { useEffect, useState } from 'react'
+
+// to help link the profile page for users
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/WebsiteLayout';
+import Profile from './routes/profilePage'
+import SignUp from './routes/signUpPage'
+import LogIn from './routes/logInPage'
+import Home from './routes/homePage'
+import About from './routes/aboutPage';
+
 
 
 let getData = () => {
@@ -37,43 +36,19 @@ let App = () => {
   return (
     <div>
 
-      {/* Header section
-      <h1 id="OpenDoorsLogo">OpenDoors</h1>
-      <img src={OpenDoorsLogo} id="OD-Logo" alt=""></img>
-      */}
-
-      <div>
-        <Header />
-      </div>
-{/*
-      <BrowserRouter>
-        <nav>
-          <ul>
-            <li>
-              <Link to="OpenDoors/" >Home</Link>
-            </li>
-            <li>
-              <Link to="signUpPage" >Sign Up</Link>
-            </li>
-            <li>
-              <Link to="logInPage" >Log In</Link>
-            </li>
-            <li>
-              <Link to="profilePage" >Profile</Link>
-            </li>
-          </ul>
-        </nav>
-
+      <>
         <Routes>
-          <Route path="profilePage" element={<Profile />} />
-          <Route path="signUpPage" element={<SignUp />} />
-          <Route path="logInPage" element={<LogIn />} />
-          <Route path="OpenDoors/" element={<Home />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="OpenDoors/" element={<Home />} />
+            <Route path="profilePage" element={<Profile />} />
+            <Route path="signUpPage" element={<SignUp />} />
+            <Route path="logInPage" element={<LogIn />} />
+            <Route path="aboutUsPage" element={<About />} />
+            <Route path="*" element={<p>Not found!</p>} />
+          </Route>
         </Routes>
-
-      </BrowserRouter>
-*/}
-      {/* end of Header section */}
+      </>
 
       {console.log(typeof backendData)}
       {
@@ -89,40 +64,6 @@ let App = () => {
           </>
         ))
       )}
-
-      {/* Footer section */}
-      <div style={{ position: 'relative', minHeight: '80vh' }}>
-        <div class="OD-footer">
-          <div style={{paddingLeft:'100px'}}>
-            <h3 style={{textIndent:'98px', cursor:'pointer'}}>About Us</h3>
-              <ul style={{listStyleType:'none', textAlign: 'center', cursor:'pointer'}}>
-                <li>Vision Statement</li>
-                <li>Privacy Policy</li>
-                <li>Frequently Asked Questions</li>
-              </ul>
-          </div>
-
-          <div style={{textAlign:'center', paddingRight:'100px'}}>
-            <h3 style={{textIndent:'45px', cursor:'pointer'}}>Accessibility</h3>
-              <ul style={{listStyleType:'none', textAlign: 'center', cursor:'pointer'}}>
-                <li>Color-Blind Mode</li>
-                <li>Big Font Mode</li>
-                <li>Donate</li>
-              </ul>
-          </div>
-
-          <div style={{textAlign:'center', paddingRight:'150px'}}>
-            <h3 style={{textIndent:'40px', cursor:'pointer'}}>Contact Us</h3>
-              <ul style={{listStyleType:'none', textAlign: 'center', cursor:'pointer'}}>
-                <li>Email Us</li>
-                <li>Our LinkedIn</li>
-                <li>Our Discord</li>
-              </ul>
-          </div>
-
-        </div>
-      </div>
-      {/* end of Footer section */}
 
     </div>
   );
