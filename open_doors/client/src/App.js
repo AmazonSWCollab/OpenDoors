@@ -2,16 +2,16 @@ import './App.css';
 
 import React, { useEffect, useState } from 'react'
 
-// to help link the profile page for users
+// to link the profile page for users
 import { Routes, Route } from 'react-router-dom';
-import Layout from './components/WebsiteLayout';
+import Layout from './layout/WebsiteLayout';
 import Profile from './routes/profilePage'
 import SignUp from './routes/signUpPage'
 import LogIn from './routes/logInPage'
 import Home from './routes/homePage'
 import About from './routes/aboutPage';
 
-
+import cat from './assets/sadKitten.jpg';
 
 let getData = () => {
   // TODO: Add useState and useEffect blocks to this body
@@ -45,11 +45,13 @@ let App = () => {
             <Route path="signUpPage" element={<SignUp />} />
             <Route path="logInPage" element={<LogIn />} />
             <Route path="aboutUsPage" element={<About />} />
-            <Route path="*" element={<p>Not found!</p>} />
+            <Route path="*" element={<div><h1 id ="notFound">Page Not Found</h1><img src={cat} id="notFound" alt=""></img></div>} />
           </Route>
         </Routes>
       </>
 
+      {/*
+      
       {console.log(typeof backendData)}
       {
         (typeof backendData == "undefined") ? (
@@ -64,6 +66,8 @@ let App = () => {
           </>
         ))
       )}
+      
+      */}
 
     </div>
   );

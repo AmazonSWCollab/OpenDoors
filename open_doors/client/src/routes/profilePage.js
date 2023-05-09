@@ -264,8 +264,6 @@ export default function Profile() {
 
       </div> {/* end of About me Section*/}
 
-      <div id="fillerSpace"></div>
-
     </div>
 
   )

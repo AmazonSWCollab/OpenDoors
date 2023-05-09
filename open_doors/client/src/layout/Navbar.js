@@ -1,4 +1,4 @@
-import { menuItems } from '../menuItems';
+import { menuItems } from '../components/menuItems';
 import MenuItems from './MenuItems';
 
 const Navbar = () => {

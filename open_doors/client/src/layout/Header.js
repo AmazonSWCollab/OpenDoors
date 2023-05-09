@@ -7,14 +7,16 @@ const Header = () => {
   return (
     <header>
       <div className="nav-area">
-        <Link to="/" className="logo">
-          OpenDoors Logo
+        <Link to="/OpenDoors/" className="logo">
+          <h1>OpenDoors</h1>
+          <img src={OpenDoorsLogo} style={{
+              width: '50px',
+              height: '60px',
+              marginRight: '20px'
+          }} alt=""></img>
         </Link>
         <Navbar />
       </div>
-
-      <h1 id="OpenDoorsLogo">OpenDoors</h1>
-      <img src={OpenDoorsLogo} id="OD-Logo" alt=""></img>
 
     </header>
   );

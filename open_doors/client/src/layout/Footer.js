@@ -1,14 +1,14 @@
 import '../App.css';
 
-const Header = () => {
+const Footer = () => {
   return (
 
     <footer>
 
       <div style={{ position: 'relative', minHeight: '80vh' }}>
-        <div class="OD-footer">
+        <div class="footer">
           <div style={{ paddingLeft: '100px' }}>
-            <h3 style={{ textIndent: '98px', cursor: 'pointer' }}>About Us</h3>
+            <h3 style={{ textIndent: '60px', cursor: 'pointer' }}>About Us</h3>
             <ul style={{ listStyleType: 'none', textAlign: 'center', cursor: 'pointer' }}>
               <li>Vision Statement</li>
               <li>Privacy Policy</li>
@@ -17,7 +17,7 @@ const Header = () => {
           </div>
 
           <div style={{ textAlign: 'center', paddingRight: '100px' }}>
-            <h3 style={{ textIndent: '45px', cursor: 'pointer' }}>Accessibility</h3>
+            <h3 style={{ textIndent: '5px', cursor: 'pointer' }}>Accessibility</h3>
             <ul style={{ listStyleType: 'none', textAlign: 'center', cursor: 'pointer' }}>
               <li>Color-Blind Mode</li>
               <li>Big Font Mode</li>
@@ -26,7 +26,7 @@ const Header = () => {
           </div>
 
           <div style={{ textAlign: 'center', paddingRight: '150px' }}>
-            <h3 style={{ textIndent: '40px', cursor: 'pointer' }}>Contact Us</h3>
+            <h3 style={{cursor: 'pointer' }}>Contact Us</h3>
             <ul style={{ listStyleType: 'none', textAlign: 'center', cursor: 'pointer' }}>
               <li>Email Us</li>
               <li>Our LinkedIn</li>
@@ -41,4 +41,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Footer;
