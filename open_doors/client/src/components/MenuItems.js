@@ -20,6 +20,10 @@ export const menuItems = [
         url: '/profilePage',
       },
       {
+        title: 'My Reviews',
+        url: '/reviewsPage',
+      },
+      {
         title: 'Settings',
         url: '/settings',
       },

@@ -14,7 +14,7 @@ export default function Profile() {
       <div id="bannerPhoto"></div>
 
       {/*green square that holds the bigger default user icon*/}
-      <div style={{marginLeft:'200px'}}>
+      <div style={{marginLeft:'75px'}}>
         <div id="profileBioSquare">
           <img href="" alt="" src={userHead}
             style={{
@@ -46,7 +46,7 @@ export default function Profile() {
           width: '220px',
           height: '50px',
           left: '130px',
-          top: '275px',
+          top: '325px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '700',
@@ -65,7 +65,7 @@ export default function Profile() {
           width: '291px',
           height: '50px',
           left: '630px',
-          top: '285px',
+          top: '323px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '700',
@@ -83,7 +83,7 @@ export default function Profile() {
           width: '440px',
           height: '320px',
           left: '540px',
-          top: '370px',
+          top: '400px',
           background: '#507A22',
           boxShadow: '5px 5px 6px rgba(0, 0, 0, 0.25)',
           borderRadius: '10px'
@@ -95,7 +95,7 @@ export default function Profile() {
           style={{
             borderRadius: '100px',
             left: '550px',
-            top: '330px',
+            top: '360px',
             width: '10px',
             height: '10px',
             display: 'flex',
@@ -114,7 +114,7 @@ export default function Profile() {
         {/* profile bio next to green circle that holds user icon */}
         <div style={{
           position: 'absolute',
-          top: '380px',
+          top: '410px',
           left:'650px',
           zIndex: '4',
           color: 'white'
@@ -137,7 +137,7 @@ export default function Profile() {
           width: '400px',
           height: '150px',
           left: '559px',
-          top: '485px',
+          top: '515px',
           background: '#D5CFE1',
           borderRadius: '10px',
           zIndex: '2'
@@ -155,7 +155,7 @@ export default function Profile() {
                 width: '35px',
                 height: '35px',
                 left: '775px',
-                top: '646px',
+                top: '676px',
                 zIndex: '3'
               }} />
         </div>
@@ -166,7 +166,7 @@ export default function Profile() {
           width: '112px',
           height: '24px',
           left: '565px',
-          top: '630px',
+          top: '680px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '500',
@@ -186,8 +186,8 @@ export default function Profile() {
           position: 'absolute',
           width: '184px',
           height: '50px',
-          left: '1100px',
-          top: '285px',
+          left: '1180px',
+          top: '323px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '700',
@@ -203,7 +203,7 @@ export default function Profile() {
           width: '240px',
           height: '37px',
           left: '1130px',
-          top: '335px',
+          top: '385px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '600',
@@ -218,8 +218,8 @@ export default function Profile() {
         position: 'absolute',
         width: '230px',
         height: '86px',
-        left: '1120px',
-        top: '380px',
+        left: '1155px',
+        top: '430px',
         fontFamily: 'Quicksand',
         fontStyle: 'normal',
         fontWeight: '500',
@@ -237,7 +237,7 @@ export default function Profile() {
           width: '290px',
           height: '37px',
           left: '1125px',
-          top: '470px',
+          top: '530px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '600',
@@ -251,8 +251,8 @@ export default function Profile() {
           position: 'absolute',
           width: '230px',
           height: '86px',
-          left: '1160px',
-          top: '520px',
+          left: '1155px',
+          top: '580px',
           fontFamily: 'Quicksand',
           fontStyle: 'normal',
           fontWeight: '500',
@@ -263,6 +263,8 @@ export default function Profile() {
         >Since April 4th, 2023</p>
 
       </div> {/* end of About me Section*/}
+
+      <div id="fillerSpace" style={{height:'200px'}}></div>
 
     </div>
 
