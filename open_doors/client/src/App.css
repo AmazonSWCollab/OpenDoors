@@ -24,7 +24,7 @@
   text-decoration: none;
   font-size: 18px;
   color: inherit;
-  margin-right: 60%;
+  margin-right: 10%;
 }
 
 .menus {
@@ -113,6 +113,22 @@ button span {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.search-bar {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.input-bar{
+  color: #507A22;
+  font-family: 'Quicksand';
+  height: 40px;
+  padding-top: 7px;
+  font-size: 20px;
+  text-align: center;
+  border: none;
 }
 
 #notFound{

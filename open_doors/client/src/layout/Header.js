@@ -1,4 +1,5 @@
 import Navbar from './Navbar';
+import SearchBar from './searchBar'
 import { Link } from 'react-router-dom';
 import OpenDoorsLogo from '../assets/symbols/Logo.png';
 
@@ -15,6 +16,11 @@ const Header = () => {
               marginRight: '20px'
           }} alt=""></img>
         </Link>
+        
+        <div className="search-bar">
+          <SearchBar />
+        </div>
+
         <Navbar />
       </div>
 
