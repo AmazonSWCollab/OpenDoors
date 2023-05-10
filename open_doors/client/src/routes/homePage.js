@@ -8,6 +8,8 @@ export default function Home() {
             <h1 id="OD-title">OpenDoors</h1>
             <p id="OD-phrase">Opening Doors for Equal Accessibility</p>
             <img src={homeImage} id="OD-Home-photo" alt=""></img>
+        
+            <div id="fillerSpace"></div>
         </div>
     )
 }
