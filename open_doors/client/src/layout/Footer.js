@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
 
       <div style={{ position: 'relative', minHeight: '80vh' }}>
-        <div class="footer">
+        <div className="footer">
           <div style={{ paddingLeft: '100px' }}>
             <h3 style={{ textIndent: '60px', cursor: 'pointer' }}>About Us</h3>
             <ul style={{ listStyleType: 'none', textAlign: 'center', cursor: 'pointer' }}>

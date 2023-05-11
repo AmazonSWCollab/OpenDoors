@@ -1,4 +1,5 @@
 import '../App.css';
+//import axios from 'axios';
 
 import { useState } from 'react';
 
@@ -19,7 +20,14 @@ export default function LogIn() {
     const handleSubmit = (event) => {
         event.preventDefault();
     };
-
+/*
+    axios
+    .get('http://localhost:3001/accounts')
+    .then(response => {
+      const accounts = response.data
+      console.log(accounts)
+    })
+*/
     return (
         <div style={{
                 position: 'relative',

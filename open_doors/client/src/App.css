@@ -256,6 +256,11 @@ button span {
   background-color: #87CB9E;
 }
 
+#submit-btn:disabled,
+button[disabled]{
+  display: none;
+}
+
 #OD-title{
   position: absolute;
   width: 720px;

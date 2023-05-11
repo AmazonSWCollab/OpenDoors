@@ -1,28 +1,72 @@
 {
   "businesses": [
-    { 
-        "id": 1,
-        "name": "Carl's Jr.",
-        "address": "123 Flower St.",
-        "zipcode": "12345",
-        "city": "Fullerton",
-        "state": "CA"
+    {
+      "id": 1,
+      "name": "Carl's Jr.",
+      "address": "123 Flower St.",
+      "zipcode": "12345",
+      "city": "Fullerton",
+      "state": "CA"
     },
     {
-        "id": 2,
-        "name": "7Leaves",
-        "address": "456 Issa Ln",
-        "zipcode": "21212",
-        "city": "Orange",
-        "state": "CA"
+      "id": 2,
+      "name": "7Leaves",
+      "address": "456 Issa Ln",
+      "zipcode": "21212",
+      "city": "Orange",
+      "state": "CA"
     },
     {
-        "id": 3,
-        "name": "24 Hour Fitness",
-        "address": "789 Drone Ave",
-        "zipcode": "98765",
-        "city": "Huntington Beach",
-        "state": "CA"
+      "id": 3,
+      "name": "24 Hour Fitness",
+      "address": "789 Drone Ave",
+      "zipcode": "98765",
+      "city": "Huntington Beach",
+      "state": "CA"
+    },
+    {
+      "id": 4,
+      "name": "California State University Fullerton",
+      "address": "800 N State College Blvd",
+      "zipcode": "92831",
+      "city": "Fullerton",
+      "state": "CA"
+    }
+  ],
+  "userAccounts": [
+    {
+      "firstName": "Cesar",
+      "lastName": "Gutierrez",
+      "email": "cesar@gmail.com",
+      "password": "1234",
+      "zipcode": "12345",
+      "id": 1
+    }
+  ],
+  "businessAccounts": [
+    {
+      "businessName": "Domino's Pizza",
+      "address": "103 W Central Ave Ste A",
+      "city": "Brea",
+      "state": "CA",
+      "zipcode": "92821",
+      "email": "DominosRule@Pizza.com",
+      "password": "PizzaHutSucks",
+      "category": "Pizza",
+      "creditCard": "123456789",
+      "id": 1
+    },
+    {
+      "businessName": "Starbucks",
+      "address": "855 E Birch St",
+      "city": "Brea",
+      "state": "CA",
+      "zipcode": "92821",
+      "email": "starbucks@starbucks.com",
+      "password": "coffee",
+      "category": "Coffee",
+      "creditCard": "5873982354",
+      "id": 2
     }
   ]
 }
