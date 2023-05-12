@@ -1,6 +1,6 @@
 import './App.css';
 
-import React, { useEffect, useState } from 'react'
+//import React, { useEffect, useState } from 'react'
 
 // to link the profile page for users
 import { Routes, Route } from 'react-router-dom';
@@ -13,15 +13,18 @@ import About from './routes/aboutPage';
 
 import cat from './assets/sadKitten.jpg';
 
+/*
 let getData = () => {
   // TODO: Add useState and useEffect blocks to this body
 
 }
+*/
 
 let App = () => {
+
   // Very basic way of getting data from the backend
   // More detailed and specific methods will be dev'd later
-
+  /*
   const [backendData, setBackendData] = useState([{}])
   useEffect(() => {
     fetch("/api").then(
@@ -32,6 +35,7 @@ let App = () => {
       }
     )
   }, [])
+  */
 
   return (
     <div>
@@ -51,7 +55,7 @@ let App = () => {
       </>
 
       {/*
-      
+
       {console.log(typeof backendData)}
       {
         (typeof backendData == "undefined") ? (
@@ -65,8 +69,8 @@ let App = () => {
             <p key={i}>{business.city}, {business.state} {business.zipcode}</p>
           </>
         ))
-      )}
-      
+        )}
+
       */}
 
     </div>
