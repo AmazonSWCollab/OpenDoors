@@ -1,17 +1,19 @@
-const express = require("express")
-const axios = require("axios")
+import express from "express"
+import axios from "axios"
+import restaurants from "./api/restaurants.route.js"
+
 //import fetch from 'node-fetch';
 
 import cors from "cors"
 //import restaurants from "./api/restaurants.route.js"
 
 const app = express()
-const PORT = 5000
+const PORT = 5001
 
 
 app.use(cors())
 app.use(express.json)
-//app.use("/api/v1/restaurants", restaurants)
+app.use("/api/v1/restaurants", restaurants)
 
 app.get("/api", (req, res) =>
     axios
@@ -27,4 +29,4 @@ app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`)
 })
 
-//export default app
+export default app

@@ -1,4 +1,5 @@
 import './App.css';
+//import "bootstrap/dist/css/bootstrap.min.css";
 
 //import React, { useEffect, useState } from 'react'
 
@@ -13,6 +14,11 @@ import About from './routes/aboutPage';
 
 import cat from './assets/sadKitten.jpg';
 
+import AddReview from "./components/add-review";
+import Restaurant from "./components/restaurants";
+import RestaurantsList from "./components/restaurants-list";
+
+let user = "Admin";
 /*
 let getData = () => {
   // TODO: Add useState and useEffect blocks to this body
@@ -72,6 +78,24 @@ let App = () => {
         )}
 
       */}
+
+      <div className="container mt-3">
+        <Routes>
+          <Route exact path={["/", "/restaurants"]} component={RestaurantsList} />
+          <Route
+            path="/restaurants/:id/review"
+            render={(props) => (
+              <AddReview {...props} user={user} />
+            )}
+          />
+          <Route
+            path="/restaurants/:id"
+            render={(props) => (
+              <Restaurant {...props} user={user} />
+            )}
+          />
+        </Routes>
+      </div>
 
     </div>
   );
