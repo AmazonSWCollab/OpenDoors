@@ -1,10 +1,12 @@
 import './App.css';
+import React from "react";
+
 //import "bootstrap/dist/css/bootstrap.min.css";
 
 //import React, { useEffect, useState } from 'react'
 
 // to link the profile page for users
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Layout from './layout/WebsiteLayout';
 import Profile from './routes/profilePage'
 import SignUp from './routes/signUpPage'
@@ -17,8 +19,8 @@ import cat from './assets/sadKitten.jpg';
 import AddReview from "./components/add-review";
 import Restaurant from "./components/restaurants";
 import RestaurantsList from "./components/restaurants-list";
+import Login from "./components/login";
 
-let user = "Admin";
 /*
 let getData = () => {
   // TODO: Add useState and useEffect blocks to this body
@@ -27,6 +29,16 @@ let getData = () => {
 */
 
 let App = () => {
+
+  const [user, setUser] = React.useState(null);
+
+  async function login(user = null) {
+    setUser(user);
+  }
+
+  async function logout() {
+    setUser(null)
+  }
 
   // Very basic way of getting data from the backend
   // More detailed and specific methods will be dev'd later
@@ -46,6 +58,21 @@ let App = () => {
   return (
     <div>
 
+      <div>
+        <nav>
+          <li>
+            {user ? (
+              <button onClick={logout} style={{ cursor: 'pointer' }}>
+                Logout {user.name}
+              </button>
+            ) : (
+              <Link to={"login"}> Login </Link>
+            )}
+          </li>
+        </nav>
+      </div>
+
+
       <>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -55,6 +82,10 @@ let App = () => {
             <Route path="signUpPage" element={<SignUp />} />
             <Route path="logInPage" element={<LogIn />} />
             <Route path="aboutUsPage" element={<About />} />
+            <Route path="/restaurants" element={<RestaurantsList />} />
+            <Route path="/restaurants/:id/review" element={<AddReview user={user} />} />
+            <Route path="/restaurants/:id" element={<Restaurant user={user}/>} />
+            <Route path="login" element={<Login login={login} />} />
             <Route path="*" element={<div><h1 id ="notFound">Page Not Found</h1><img src={cat} id="notFound" alt=""></img></div>} />
           </Route>
         </Routes>
@@ -76,26 +107,8 @@ let App = () => {
           </>
         ))
         )}
-
       */}
 
-      <div className="container mt-3">
-        <Routes>
-          <Route exact path={["/", "/restaurants"]} component={RestaurantsList} />
-          <Route
-            path="/restaurants/:id/review"
-            render={(props) => (
-              <AddReview {...props} user={user} />
-            )}
-          />
-          <Route
-            path="/restaurants/:id"
-            render={(props) => (
-              <Restaurant {...props} user={user} />
-            )}
-          />
-        </Routes>
-      </div>
 
     </div>
   );

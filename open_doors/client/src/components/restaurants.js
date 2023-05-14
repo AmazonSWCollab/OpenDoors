@@ -3,6 +3,7 @@ import RestaurantDataService from "../services/restaurant";
 import { Link } from "react-router-dom";
 
 const Restaurant = props => {
+
   const initialRestaurantState = {
     id: null,
     name: "",

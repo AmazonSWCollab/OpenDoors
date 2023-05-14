@@ -12,9 +12,6 @@ class RestaurantDataService {
 
   get(id) {
 
-    // this one is from the tutortial but is deprecated but worth noting
-    //return http.get(`/id/${id}`);
-
     // this one is active with MongoDb
     //return http.get(`/restaurant/id/${id}`);
 

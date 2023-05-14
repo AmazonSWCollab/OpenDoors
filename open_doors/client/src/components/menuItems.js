@@ -10,6 +10,10 @@ export const menuItems = [
     url: '/logInPage',
   },
   {
+    title: 'Review',
+    url: '/restaurants',
+  },
+  {
     title: <img href="" alt="" src={userIcon} style={{
         width: '45px', height: '45px', backgroundColor: '#fff', borderRadius: '100%'
       }}/>,
