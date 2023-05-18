@@ -49,7 +49,7 @@ class RestaurantDataService {
   deleteReview(id, userId) {
 
     // nodemon servers
-    return http.delete(`/review?id=${id}`, {data:{user_id: userId}});
+    return http.delete(`/review?id=${id}`, { data: { user_id: userId } });
 
     // mongoDB
     //return http.delete(`/review-delete?id=${id}`, {data:{user_id: userId}});
@@ -61,7 +61,4 @@ class RestaurantDataService {
 
 }
 
-//export default new RestaurantDataService();
-
-const restaurantDataService = new RestaurantDataService();
-export default restaurantDataService;
+export default new RestaurantDataService();

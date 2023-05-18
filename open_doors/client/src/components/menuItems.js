@@ -25,15 +25,15 @@ export const menuItems = [
       },
       {
         title: 'My Reviews',
-        url: '/reviewsPage',
+        url: '/errorPage',
       },
       {
         title: 'Settings',
-        url: '/settings',
+        url: '/errorPage',
       },
       {
         title: 'Log Out',
-        url: '/logOutPage',
+        url: '/errorPage',
       },
     ],
   },

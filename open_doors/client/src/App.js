@@ -1,25 +1,22 @@
-import './App.css';
+import "./App.css";
+
 import React from "react";
+import { Switch, Route, Link } from "react-router-dom";
+import Profile from "./routes/profilePage"
+import SignUp from "./routes/signUpPage"
+import LogIn from "./routes/logInPage"
+import Home from "./routes/homePage"
+import About from "./routes/aboutPage";
+import Error from "./routes/errorPage";
 
-//import "bootstrap/dist/css/bootstrap.min.css";
-
-//import React, { useEffect, useState } from 'react'
-
-// to link the profile page for users
-import { Routes, Route, Link } from 'react-router-dom';
-import Layout from './layout/WebsiteLayout';
-import Profile from './routes/profilePage'
-import SignUp from './routes/signUpPage'
-import LogIn from './routes/logInPage'
-import Home from './routes/homePage'
-import About from './routes/aboutPage';
-
-import cat from './assets/sadKitten.jpg';
 
 import AddReview from "./components/add-review";
 import Restaurant from "./components/restaurants";
 import RestaurantsList from "./components/restaurants-list";
 import Login from "./components/login";
+
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
 
 /*
 let getData = () => {
@@ -41,7 +38,7 @@ let App = () => {
   }
 
   // Very basic way of getting data from the backend
-  // More detailed and specific methods will be dev'd later
+  // More detailed and specific methods will be dev"d later
   /*
   const [backendData, setBackendData] = useState([{}])
   useEffect(() => {
@@ -62,9 +59,7 @@ let App = () => {
         <nav>
           <li>
             {user ? (
-              <button onClick={logout} style={{ cursor: 'pointer' }}>
-                Logout {user.name}
-              </button>
+              <button onClick={logout} style={{ cursor: "pointer" }}> Logout {user.name} </button>
             ) : (
               <Link to={"login"}> Login </Link>
             )}
@@ -72,24 +67,21 @@ let App = () => {
         </nav>
       </div>
 
+      <Header></Header>
 
-      <>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="OpenDoors/" element={<Home />} />
-            <Route path="profilePage" element={<Profile />} />
-            <Route path="signUpPage" element={<SignUp />} />
-            <Route path="logInPage" element={<LogIn />} />
-            <Route path="aboutUsPage" element={<About />} />
-            <Route path="/restaurants" element={<RestaurantsList />} />
-            <Route path="/restaurants/:id/review" element={<AddReview user={user} />} />
-            <Route path="/restaurants/:id" element={<Restaurant user={user}/>} />
-            <Route path="login" element={<Login login={login} />} />
-            <Route path="*" element={<div><h1 id ="notFound">Page Not Found</h1><img src={cat} id="notFound" alt=""></img></div>} />
-          </Route>
-        </Routes>
-      </>
+        <Switch>
+          <Route exact path={["/", "/OpenDoors"]} component={Home} />
+          <Route exact path="/restaurants" component={RestaurantsList} />
+          <Route path="/restaurants/:id/review" render={(props) => (<AddReview {...props} user={user} /> )} />
+          <Route path="/restaurants/:id" render={(props) => ( <Restaurant {...props} user={user} /> )} />
+          <Route path="/OpenDoors/login" render={(props) => ( <Login {...props} login={login} /> )} />
+          <Route path="/profilePage" component={Profile} />
+          <Route path="/signUpPage" component={SignUp} />
+          <Route path="/logInPage" component={LogIn} />
+          <Route path="/aboutUsPage" component={About} />
+          <Route path="/errorPage" component={Error} />
+        </Switch>
+
 
       {/*
 
@@ -109,6 +101,7 @@ let App = () => {
         )}
       */}
 
+      <Footer></Footer>
 
     </div>
   );

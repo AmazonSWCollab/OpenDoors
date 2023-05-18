@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const Login = props => {
-
-  const navigate = useNavigate();
 
   const initialUserState = {
     name: "",
@@ -19,7 +16,7 @@ const Login = props => {
 
   const login = () => {
     props.login(user)
-    navigate('/');
+    props.history.push('/');
   }
 
   return (
