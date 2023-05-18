@@ -6,10 +6,6 @@ export const menuItems = [
     url: '/signUpPage',
   },
   {
-    title: 'Log In',
-    url: '/logInPage',
-  },
-  {
     title: 'Review',
     url: '/restaurants',
   },

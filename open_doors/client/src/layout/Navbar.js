@@ -2,6 +2,7 @@ import { menuItems } from '../components/menuItems';
 import MenuItems from './MenuItems';
 
 const Navbar = () => {
+
   return (
     <nav>
       <ul className="menus">

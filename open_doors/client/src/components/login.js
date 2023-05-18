@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import '../App.css';
+import React, { useState } from 'react';
 
-const Login = props => {
+const LogIn = props => {
 
   const initialUserState = {
     name: "",
@@ -20,40 +21,50 @@ const Login = props => {
   }
 
   return (
-    <div className="submit-form">
-      <div>
-        <div className="form-group">
-          <label htmlFor="user">Username</label>
+    <div style={{
+      position: 'relative',
+      color: '#507A22',
+      fontFamily: 'Quicksand',
+      fontSize: '24px',
+      fontWeight: '700',
+      textAlign: 'center'
+    }}>
+      <br></br>
+      <h1>Log Into OpenDoors</h1>
+      <br></br>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+
+        <label htmlFor="user" style={{ marginBottom: '12px' }}>
+          Username:
           <input
             type="text"
-            className="form-control"
             id="name"
             required
             value={user.name}
             onChange={handleInputChange}
             name="name"
-          />
-        </div>
+            style={{ marginLeft: '70px' }} />
+        </label>
 
-        <div className="form-group">
-          <label htmlFor="id">ID</label>
+        <label htmlFor="id" style={{ marginBottom: '12px' }}>
+          Password:
           <input
-            type="text"
-            className="form-control"
+            type="password"
             id="id"
             required
             value={user.id}
             onChange={handleInputChange}
             name="id"
-          />
-        </div>
+            style={{ marginLeft: '74px' }} />
+        </label>
 
-        <button onClick={login} className="btn btn-success">
-          Login
-        </button>
+        <br></br>
       </div>
+
+      <button id="submit-btn" onClick={login}>Log In</button>
+
     </div>
   );
 };
 
-export default Login;
+export default LogIn;

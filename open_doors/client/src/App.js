@@ -1,19 +1,19 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
+
 import Profile from "./routes/profilePage"
 import SignUp from "./routes/signUpPage"
-import LogIn from "./routes/logInPage"
 import Home from "./routes/homePage"
 import About from "./routes/aboutPage";
 import Error from "./routes/errorPage";
 
-
 import AddReview from "./components/add-review";
 import Restaurant from "./components/restaurants";
 import RestaurantsList from "./components/restaurants-list";
-import Login from "./components/login";
+import LogIn from "./components/login";
 
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
@@ -26,16 +26,6 @@ let getData = () => {
 */
 
 let App = () => {
-
-  const [user, setUser] = React.useState(null);
-
-  async function login(user = null) {
-    setUser(user);
-  }
-
-  async function logout() {
-    setUser(null)
-  }
 
   // Very basic way of getting data from the backend
   // More detailed and specific methods will be dev"d later
@@ -52,54 +42,63 @@ let App = () => {
   }, [])
   */
 
-  return (
-    <div>
+  const [user, setUser] = React.useState(null);
 
-      <div>
-        <nav>
+  async function login(user = null) {
+    setUser(user);
+  }
+
+  async function logout() {
+    setUser(null)
+  }
+
+  return (
+    <div style={{ backgroundColor: '#F7F4BB' }}>
+
+      <div style={{
+        display: "flex",
+        alignItems: "center",
+        listStyle: "none",
+        fontFamily: "Quicksand",
+        position: "absolute",
+        fontSize: "21px",
+        top: "20px",
+        right: "300px"
+      }}>
           <li>
             {user ? (
-              <button onClick={logout} style={{ cursor: "pointer" }}> Logout {user.name} </button>
+            <button onClick={logout} style={{
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              listStyle: "none",
+              fontFamily: "Quicksand",
+              fontSize: "21px",
+              backgroundColor: "#507A22",
+              color: "#fff",
+              border: "none"
+            }}> Logout {user.name} </button>
             ) : (
-              <Link to={"login"}> Login </Link>
+              <Link to={"/logIn"} style={{textDecoration:"none", color:"#fff"}}> Log In </Link>
             )}
           </li>
-        </nav>
       </div>
 
       <Header></Header>
 
+      <div className="container mt-3">
         <Switch>
           <Route exact path={["/", "/OpenDoors"]} component={Home} />
           <Route exact path="/restaurants" component={RestaurantsList} />
           <Route path="/restaurants/:id/review" render={(props) => (<AddReview {...props} user={user} /> )} />
           <Route path="/restaurants/:id" render={(props) => ( <Restaurant {...props} user={user} /> )} />
-          <Route path="/OpenDoors/login" render={(props) => ( <Login {...props} login={login} /> )} />
-          <Route path="/profilePage" component={Profile} />
-          <Route path="/signUpPage" component={SignUp} />
-          <Route path="/logInPage" component={LogIn} />
-          <Route path="/aboutUsPage" component={About} />
-          <Route path="/errorPage" component={Error} />
+          <Route path="/logIn" render={(props) => ( <LogIn {...props} login={login} /> )} />
+          <Route path="/profilePage" render={(props) => (<Profile {...props} user={user} />)} />
+          <Route path="/signUpPage" render={(props) => (<SignUp {...props} user={user} />)} />
+          <Route path="/aboutUsPage" render={(props) => (<About {...props} user={user} />)} />
+          <Route path="/errorPage" render={(props) => (<Error {...props} user={user} />)} />
         </Switch>
-
-
-      {/*
-
-      {console.log(typeof backendData)}
-      {
-        (typeof backendData == "undefined") ? (
-        <p>Loading...</p>
-      ) : (
-        backendData.map((business, i) => (
-          <>
-            <h1 key={i}>{business.name}</h1>
-            <p key={i}>Located at:</p>
-            <p key={i}>{business.address} </p>
-            <p key={i}>{business.city}, {business.state} {business.zipcode}</p>
-          </>
-        ))
-        )}
-      */}
+      </div>
 
       <Footer></Footer>
 
@@ -108,3 +107,21 @@ let App = () => {
 }
 
 export default App;
+
+    /*
+
+    {console.log(typeof backendData)}
+    {
+      (typeof backendData == "undefined") ? (
+      <p>Loading...</p>
+    ) : (
+      backendData.map((business, i) => (
+        <>
+          <h1 key={i}>{business.name}</h1>
+          <p key={i}>Located at:</p>
+          <p key={i}>{business.address} </p>
+          <p key={i}>{business.city}, {business.state} {business.zipcode}</p>
+        </>
+      ))
+      )}
+    */
