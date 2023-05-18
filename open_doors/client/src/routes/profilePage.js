@@ -25,7 +25,7 @@ export default function Profile() {
 
         {/*user bio info: name, city, state, default stars icon*/}
         <div id="profileBio">
-          <h2 style={{ margin: '0'}}>Pancho Rodriguez</h2>
+          <h2 style={{ margin: '0'}}>Pancho Rodriguez (Example Profile Page)</h2>
           <h4 style={{ margin: '0'}}>Fullerton, CA</h4>
           <h4 style={{ display: 'flex', alignItems: 'center', margin: '0' }}>
             <img href="" alt="" src={stars}

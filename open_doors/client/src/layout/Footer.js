@@ -8,7 +8,7 @@ const Footer = () => {
       <div style={{ position: 'relative', minHeight: '80vh' }}>
         <div className="footer">
           <div style={{ paddingLeft: '100px' }}>
-            <h3 style={{ textIndent: '60px', cursor: 'pointer' }}>About Us</h3>
+            <h3 style={{ textIndent: '40px', cursor: 'pointer' }}>About Us</h3>
             <ul style={{ listStyleType: 'none', textAlign: 'center', cursor: 'pointer' }}>
               <li>Vision Statement</li>
               <li>Privacy Policy</li>

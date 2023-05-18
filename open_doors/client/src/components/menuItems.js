@@ -6,8 +6,8 @@ export const menuItems = [
     url: '/signUpPage',
   },
   {
-    title: 'Log In',
-    url: '/logInPage',
+    title: 'Review',
+    url: '/restaurants',
   },
   {
     title: <img href="" alt="" src={userIcon} style={{
@@ -21,15 +21,15 @@ export const menuItems = [
       },
       {
         title: 'My Reviews',
-        url: '/reviewsPage',
+        url: '/errorPage',
       },
       {
         title: 'Settings',
-        url: '/settings',
+        url: '/errorPage',
       },
       {
         title: 'Log Out',
-        url: '/logOutPage',
+        url: '/errorPage',
       },
     ],
   },

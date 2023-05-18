@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
 
 import searchIcon from '../assets/symbols/SearchButton.png';
 
 function SearchBar() {
   const [name, setName] = useState('');
   const [city, setCity] = useState('');
+  const history = useHistory();
 
   const handlenameChange = (e) => {
     setName(e.target.value);
@@ -15,8 +17,10 @@ function SearchBar() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     // do something with name and city
+
+    // for now error page
+    history.push('/errorPage');
   };
 
   return (
@@ -27,10 +31,11 @@ function SearchBar() {
       <label>
         <input type="text" placeholder="City" value={city} onChange={handleCityChange} className="input-bar"/>
       </label>
-      <button type="submit" style={{backgroundColor: '#DD9500', padding: '5px', border:'solid', borderColor:'black', cursor: 'pointer'}}>
+      <button type="submit" onClick={handleSubmit}
+        style={{ backgroundColor: '#DD9500', padding: '5px 0px', border: 'solid', borderColor: 'black', cursor: 'pointer' }}>
         <img src={searchIcon} style={{
-          width: '25px',
-          height: '25px',
+          width: '28px',
+          height: '28px',
           }} alt=""></img>
       </button>
     </form>
