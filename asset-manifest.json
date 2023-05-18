@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/OpenDoors/static/css/main.5e97e94f.css",
-    "main.js": "/OpenDoors/static/js/main.86e900f7.js",
+    "main.css": "/OpenDoors/static/css/main.19d9b813.css",
+    "main.js": "/OpenDoors/static/js/main.53402514.js",
     "static/js/787.c4e7f8f9.chunk.js": "/OpenDoors/static/js/787.c4e7f8f9.chunk.js",
     "static/media/Grandma and Child.png": "/OpenDoors/static/media/Grandma and Child.d758ca46382b8b582dad.png",
     "static/media/sadKitten.jpg": "/OpenDoors/static/media/sadKitten.b2c6e26668254ab1ac1c.jpg",
     "index.html": "/OpenDoors/index.html",
-    "main.5e97e94f.css.map": "/OpenDoors/static/css/main.5e97e94f.css.map",
-    "main.86e900f7.js.map": "/OpenDoors/static/js/main.86e900f7.js.map",
+    "main.19d9b813.css.map": "/OpenDoors/static/css/main.19d9b813.css.map",
+    "main.53402514.js.map": "/OpenDoors/static/js/main.53402514.js.map",
     "787.c4e7f8f9.chunk.js.map": "/OpenDoors/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e97e94f.css",
-    "static/js/main.86e900f7.js"
+    "static/css/main.19d9b813.css",
+    "static/js/main.53402514.js"
   ]
 }
