@@ -9,6 +9,7 @@ import SignUp from "./routes/signUpPage"
 import Home from "./routes/homePage"
 import About from "./routes/aboutPage";
 import Error from "./routes/errorPage";
+import ReviewPage from "./routes/reviewPage";
 
 import AddReview from "./components/add-review";
 import Restaurant from "./components/restaurants";
@@ -97,6 +98,7 @@ let App = () => {
           <Route path="/signUpPage" render={(props) => (<SignUp {...props} user={user} />)} />
           <Route path="/aboutUsPage" render={(props) => (<About {...props} user={user} />)} />
           <Route path="/errorPage" render={(props) => (<Error {...props} user={user} />)} />
+          <Route path="/reviewPage" render={(props) => (<ReviewPage {...props} user={user} />)} />
         </Switch>
       </div>
 
